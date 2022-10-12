@@ -10,8 +10,8 @@ const DisplayData = ({ data }) => {
       </div>
       {/*==== Description====  */}
       <div className="p-2 text-center flex flex-col justify-center items-center">
-        <h2 className="text-xl font-bold text-black">{name}</h2>
-        <p>Total Quiz - {total}</p>
+        <h2 className="text-xl font-bold">{name}</h2>
+        <p className="text-gray-400">Total Quiz - {total}</p>
         <button className="bg-red-400 px-6 py-2 rounded-full shadow-md mt-4 text-white font-bold flex items-center hover:bg-red-500">
           <div> Start Practice</div>
           <div className="block md:hidden lg:block">
