@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 const DisplayData = ({ data }) => {
-  const { name, logo, total } = data;
+  const { name, logo, total,id } = data;
   return (
     <div className="border m-3 p-4 rounded-lg shadow-md">
       <div className="w-[100%] bg-gray-200 rounded-lg">
