@@ -1,5 +1,5 @@
 import React from "react";
-import Options from "../Options/Options";
+
 import { EyeIcon } from "@heroicons/react/24/solid";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,12 @@ const Quiz = ({ data }) => {
     }
   };
   const addHandelar = (e) => {
-    console.log(e.target.value);
+    const handelardata = e.target.value;
+    if (handelardata === correctAnswer) {
+      toast.success("Right Answer", { autoClose: 700 });
+    } else {
+      toast.error("Wrong Answer", { autoClose: 700 });
+    }
   };
 
   return (
@@ -30,16 +35,34 @@ const Quiz = ({ data }) => {
         </label>
 
         <label htmlFor={options[1]} className="bg-white m-4 p-4 rounded-lg">
-          <input onClick={addHandelar} type="radio" name={id} id={options[1]} value={options[1]} />{" "}
+          <input
+            onClick={addHandelar}
+            type="radio"
+            name={id}
+            id={options[1]}
+            value={options[1]}
+          />{" "}
           {options[1]}
         </label>
 
         <label htmlFor={options[2]} className="bg-white m-4 p-4 rounded-lg">
-          <input onClick={addHandelar} type="radio" name={id} id={options[2]} value={options[2]} />{" "}
+          <input
+            onClick={addHandelar}
+            type="radio"
+            name={id}
+            id={options[2]}
+            value={options[2]}
+          />{" "}
           {options[2]}
         </label>
         <label htmlFor={options[3]} className="bg-white m-4 p-4 rounded-lg">
-          <input onClick={addHandelar} type="radio" name={id} id={options[3]} value={options[3]} />{" "}
+          <input
+            onClick={addHandelar}
+            type="radio"
+            name={id}
+            id={options[3]}
+            value={options[3]}
+          />{" "}
           {options[3]}
         </label>
       </div>
